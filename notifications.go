@@ -56,6 +56,7 @@ type NotificationRequest struct {
 	IOSBadgeType           string            `json:"ios_badgeType,omitempty"`
 	IOSBadgeCount          int               `json:"ios_badgeCount,omitempty"`
 	IOSSound               string            `json:"ios_sound,omitempty"`
+	IOSAttachment          map[string]string `json:"ios_attachments,omitempty"`
 	AndroidSound           string            `json:"android_sound,omitempty"`
 	ADMSound               string            `json:"adm_sound,omitempty"`
 	WPSound                string            `json:"wp_sound,omitempty"`
@@ -76,6 +77,8 @@ type NotificationRequest struct {
 	SendAfter              string            `json:"send_after,omitempty"`
 	DelayedOption          string            `json:"delayed_option,omitempty"`
 	DeliveryTimeOfDay      string            `json:"delivery_time_of_day,omitempty"`
+	TTL                    int               `json:"ttl,omitempty"`
+	Priority               int               `json:"priority,omitempty"`
 	AndroidLEDColor        string            `json:"android_led_color,omitempty"`
 	AndroidAccentColor     string            `json:"android_accent_color,omitempty"`
 	AndroidVisibility      int               `json:"android_visibility,omitempty"`
@@ -85,6 +88,7 @@ type NotificationRequest struct {
 	TemplateID             string            `json:"template_id,omitempty"`
 	AndroidGroup           string            `json:"android_group,omitempty"`
 	AndroidGroupMessage    interface{}       `json:"android_group_message,omitempty"`
+	AndroidChannelID       string            `json:"android_channel_id,omitempty"`
 	ADMGroup               string            `json:"adm_group,omitempty"`
 	ADMGroupMessage        interface{}       `json:"adm_group_message,omitempty"`
 	Filters                interface{}       `json:"filters,omitempty"`
